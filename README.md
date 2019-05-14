@@ -1,13 +1,14 @@
-# redd
+# vue/electron Boilerplate
 
 ## Project setup
 ```
-npm install
+npm build
+npm start
 ```
 
 ### Compiles and hot-reloads for development
 ```
-npm run serve
+npm run dev
 ```
 
 ### Compiles and minifies for production
@@ -15,15 +16,15 @@ npm run serve
 npm run build
 ```
 
-### Run your tests
-```
-npm run test
-```
-
 ### Lints and fixes files
 ```
 npm run lint
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+"scripts": {
+    "dev": "NODE_ENV=DEV vue-cli-service serve & sleep 5 && NODE_ENV=DEV electron main.js",
+    "serve": "vue-cli-service serve --open",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "start": "electron main.js"
+  },
